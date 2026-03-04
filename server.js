@@ -21,7 +21,7 @@ app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, x-broker-auth");
   if (req.method === "OPTIONS") return res.sendStatus(204);
   next();
-});
+}); 
 
 // Shared-secret auth: only the Next.js server (which holds BROKER_AUTH_SECRET) may
 // call /start. Skipped in development so local testing stays frictionless.
